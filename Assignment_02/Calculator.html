@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <center>
+    <table style="height: 70%; width:60%; text-align: center;">
+        <thead>
+            <th style="width: 20%;"></th>
+            <th style="text-align: center;font-size:x-large; width: 20%;"><br><br>Calculator<br><br><br><br></th></u></th>
+            <th style="width: 20%;" ></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Enter Number 1</td>
+                <td><input type="number" id="num1"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Enter Number 2</td>
+                <td><input type="number" id="num2"></td>
+                <td id="errormsg" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="number" value="0" disabled="disabled" id="result"></td>
+                <td> </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tr><br><br>
+            <td><input type="button" value="Add" onclick="operation(1)" id="a">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="button" value="Subtract" onclick="operation(2)" id="s">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="button" value="Multiply" onclick="operation(3)" id="m">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td><input type="button" value="Divide" onclick="operation(4)" id="d">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        </tr>
+    </table>
+    </center>
+
+    <script>
+        function operation(choice){
+            debugger;
+            var num1 = Number(document.getElementById("num1").value);
+            var num2 = Number(document.getElementById("num2").value);
+            var refToResult = document.getElementById("result");
+            var refToError = document.getElementById("errormsg");
+            switch(choice){
+                case 1: refToResult.value = num1 + num2;
+                        break;
+
+                case 2: refToResult.value = num1 - num2;
+                        break;
+
+                case 3: refToResult.value = num1 * num2;
+                        break;
+
+                case 4: if (num2 == 0){
+                            refToError.innerText= "Invalid, divisor cannot be zero.";
+                        }
+                        refToResult.value = num1 / num2;
+                        break;
+            }
+
+        }
+
+    </script>
+</body>
+</html>
