@@ -1,0 +1,5 @@
+.tripleborder{
+    box-shadow: 0 0 0 0.5px black, 0 0 0 0.5px rgb(5, 0, 1),0 0 0 3px inset, 0 0 0 0.5px rgb(5, 0, 1) inset;
+    border:0.5 px white;
+    padding: 10px;
+}
