@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Registration Form</title>
+        <style>
+            td{
+                font-weight: bold;
+                font-size: 100%;
+            }
+            input[type=text]{
+                font-size: 20px;
+            }
+            input[type=number]{
+                font-size: 20px;
+            }
+            input[type=date]{
+                font-size: 20px;
+            }
+            input[type=password]{
+                font-size: 20px;
+            }
+            input[type=file]{
+                font-size: 20px;
+            }
+            input[type=email]{
+                font-size: 20px;
+            }
+            select{
+                font-size: 20px;
+            }
+            input[type=submit]{
+                font-size: 140%;
+            }
+            input[type=reset]{
+                font-size: 140%;
+            }
+            input[type="date"]::before { 
+    	        content: attr(data-placeholder);
+    	        width: 100%;
+            }
+            input[type="date"]:focus::before,
+            input[type="date"]:valid::before { display: none }
+
+        </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Registration Form</h1>
+    <br><br><br><br>
+    <div >
+    <table style="width: 100%;;">
+        <tbody>
+            <tr>
+                <td >
+                    <center>
+                    <img src="ashish.png" alt="img" height="80%" width="80%">
+                    </center>
+                </td>
+                <td >
+                    <table align="center">
+                    <tbody>    
+                    <tr>
+                        <td>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><input type="text" required="required" placeholder="Enter Name" name="MyName"/>&nbsp;&nbsp;*</td>
+                    </tr>
+                    <tr>
+                        <td>BirthDate<p word></p></td>
+                        <td><input type="date" required aria-required="true" data-placeholder="dd-MM-yyyy" name="MyBirthDate"/>&nbsp;&nbsp; *</td>
+                    </tr>
+                    <tr>
+                        <td>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><input type="email" placeholder="abc@gmail.com" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9]+$" name="MyEMail"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td><input type="password" placeholder="********" name="MyPassword" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g"/></td>
+                    </tr>
+                    <tr>
+                        <td>Address&nbsp;&nbsp;&nbsp;</td>
+                        <td><select name="MyState">
+                            <option value="1">Assam</option>
+                            <option value="2">Maharashtra</option>
+                            <option value="3">Haryana</option>
+                            <option value="4">UP</option>
+                        </select>
+                        <select name="MyDistrict">
+                            <option value="1">Guwahati</option>
+                            <option value="2">Pune</option>
+                            <option value="3">Gurugram</option>
+                            <option value="4">Jaunpur</option>
+                        </select>
+                        <select name="MyCity">
+                            <option value="1">Guwahati</option>
+                            <option value="2">Pune</option>
+                            <option value="3">Gurugram</option>
+                            <option value="4">Jaunpur</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;State &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            District &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            City </td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td><input type="radio" name="MyGender"/> Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="MyGender"/> Female</td>
+                    </tr>
+                    <tr>
+                        <td>Upload Photo</td>
+                        <td>
+                            <input type="file" id="myFile" name="filename"/></option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select your course</td>
+                        <td><select name="MyCourse" >
+                            <option value="" disabled selected hidden>Select Course</option>
+                            <option value="1">DAC</option>
+                            <option value="2">DITISS</option>
+                            <option value="3">DESD</option>
+                            <option value="4">DMC</option>      
+                        </select></td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                </td>
+                <td>
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="Registeration" value="Register" style="width:200px"/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" name="Delete" value="Clear" style="width:200px"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
